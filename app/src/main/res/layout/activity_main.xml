@@ -1,0 +1,72 @@
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipe_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/holo_blue_dark"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:id="@+id/rgRadioGroup"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rbCreated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sort by date created" />
+
+            <RadioButton
+                android:id="@+id/rbReplies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sort by replies" />
+
+            <RadioButton
+                android:id="@+id/rbViews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sort by views" />
+        </RadioGroup>
+
+        <LinearLayout
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/bPreviousPage"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Previous Page"
+                android:textColor="@android:color/primary_text_dark" />
+
+            <Button
+                android:id="@+id/bNextPage"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Next Page"
+                android:textColor="@android:color/primary_text_dark" />
+
+
+        </LinearLayout>
+
+
+        <ListView
+            android:id="@+id/lvCustomList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+</android.support.v4.widget.SwipeRefreshLayout>
